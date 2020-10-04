@@ -1,0 +1,93 @@
+@import "mixins";
+@import "vars";
+
+@include main;
+
+section {
+  padding: 1em 3em;
+}
+
+nav {
+  background-color: $color-dark-green;
+  text-align: center;
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 0.5em 1em;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-green-light;
+        color: $color-dark-green;
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    li:last-child {
+      color: $color-red;
+      display: none;
+    }
+  }
+}
+
+#logo {
+  background-color: $color-green-light;
+  @include clearfix;
+}
+
+#left {
+  float: left;
+  @include clearfix;
+  img {
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  p {
+    margin-left: 0.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+    font-size: 2em;
+    padding-top: 1%;
+
+    span {
+      color: $color-red;
+    }
+  }
+}
+
+#right {
+  float: right;
+  margin-top: 10px;
+
+  form {
+    input {
+      background-color: $color-dark-green;
+    }
+
+    button {
+      background-color: $color-red;
+      color: $color-regular-green;
+    }
+    input,
+    button {
+      padding: 0.5em;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
+  p {
+    text-align: right;
+    padding-top: 0.5em;
+    color: $color-dark-green;
+    span {
+      color: $color-red;
+      text-decoration: underline;
+    }
+  }
+}
