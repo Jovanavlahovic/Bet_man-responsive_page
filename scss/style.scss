@@ -4,7 +4,13 @@
 @include main;
 
 section {
-  padding: 1em 3em;
+  padding: 2em 3em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "$font-titles-n-logo";
 }
 
 nav {
@@ -49,10 +55,10 @@ nav {
   p {
     margin-left: 0.3em;
     text-transform: uppercase;
-    font-weight: bold;
     float: left;
     font-size: 2em;
-    padding-top: 1%;
+    padding-top: 2%;
+    font-family: $font-titles-n-logo;
 
     span {
       color: $color-red;
@@ -90,4 +96,104 @@ nav {
       text-decoration: underline;
     }
   }
+}
+
+main {
+  height: 100vh;
+  background-image: url("../slike/intro.jpg");
+  background-size: cover;
+  text-align: center;
+  position: relative;
+
+  h1,
+  p {
+    margin: 0 auto;
+  }
+}
+
+.main-text {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+
+  p {
+    background-color: $color-dark-green;
+    width: fit-content;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+
+    a {
+      color: $color-green-light;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $color-green-light;
+      a {
+        color: $color-dark-green;
+      }
+    }
+  }
+}
+
+h1 {
+  color: #fff;
+  font-family: $font-titles-n-logo;
+  background-color: rgba(#000, 0.5);
+  padding: 0.3em 0;
+  width: 60%;
+}
+
+#benefits {
+  background-color: $color-light;
+  text-align: center;
+  @include clearfix;
+}
+h2 {
+  font-family: $font-titles-n-logo;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: $color-dark-green;
+  margin-bottom: 1.5em;
+}
+
+.img-box {
+  width: 33.30%;
+  float: left;
+
+  .img-container {
+    height: 200px;
+    width: 100%;
+    img {
+      height: 180px;
+
+      &:hover {
+        height: 199px;
+      }
+    }
+  }
+
+  .text {
+    h3 {
+      color: $color-red;
+      font-family: $font-titles-n-logo;
+      padding: 0.5em 0;
+    }
+  }
+}
+
+#about{
+    text-align: justify;
+    @include clearfix;
+
+    a{
+        padding: 0.5em 1em;
+        float: right;
+        background-color: $color-red;
+        color:$color-green-light;
+        border-radius: 5px;
+        text-decoration: none;
+    }
 }
