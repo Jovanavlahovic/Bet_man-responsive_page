@@ -10,7 +10,7 @@ section {
 h1,
 h2,
 h3 {
-  font-family: "$font-titles-n-logo";
+  font-family: $font-titles-n-logo;
 }
 
 nav {
@@ -55,10 +55,11 @@ nav {
   p {
     margin-left: 0.3em;
     text-transform: uppercase;
+    font-weight: bold;
+    font-family: $font-titles-n-logo;
     float: left;
     font-size: 2em;
     padding-top: 2%;
-    font-family: $font-titles-n-logo;
 
     span {
       color: $color-red;
@@ -77,13 +78,16 @@ nav {
 
     button {
       background-color: $color-red;
-      color: $color-regular-green;
+      color: $color-green-light;
     }
     input,
     button {
       padding: 0.5em;
       border: none;
       border-radius: 5px;
+    }
+    ::placeholder {
+      color: $color-green-light;
     }
   }
 
@@ -99,7 +103,7 @@ nav {
 }
 
 main {
-  height: 100vh;
+  height: 80vh;
   background-image: url("../slike/intro.jpg");
   background-size: cover;
   text-align: center;
@@ -114,7 +118,7 @@ main {
 .main-text {
   position: absolute;
   width: 100%;
-  top: 25%;
+  top: 20%;
 
   p {
     background-color: $color-dark-green;
@@ -140,7 +144,6 @@ main {
 
 h1 {
   color: #fff;
-  font-family: $font-titles-n-logo;
   background-color: rgba(#000, 0.5);
   padding: 0.3em 0;
   width: 60%;
@@ -152,7 +155,6 @@ h1 {
   @include clearfix;
 }
 h2 {
-  font-family: $font-titles-n-logo;
   text-transform: uppercase;
   font-size: 2em;
   color: $color-dark-green;
@@ -171,6 +173,7 @@ h2 {
 
       &:hover {
         height: 199px;
+        cursor: pointer;
       }
     }
   }
@@ -178,7 +181,6 @@ h2 {
   .text {
     h3 {
       color: $color-red;
-      font-family: $font-titles-n-logo;
       padding: 0.5em 0;
     }
   }
@@ -189,6 +191,7 @@ h2 {
   @include clearfix;
 
   a {
+    margin-top: 0.5em;
     padding: 0.5em 1em;
     float: right;
     background-color: $color-red;
@@ -204,7 +207,7 @@ h2 {
 
   .left {
     float: left;
-    width: 49%;
+    width: 47%;
     background-color: #7f7f7f;
     padding: 2em;
     h2 {
@@ -237,10 +240,120 @@ h2 {
     cursor: pointer;
   }
 
-  .right{
-      float: right;
-      iframe{
-          height: 360px;
+  .right {
+    float: right;
+    iframe {
+      height: 360px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  section {
+    padding: 2em 3em;
+  }
+
+  main {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  nav {
+    ul li:last-child {
+      display: inline-block;
+      a {
+        color: $color-red;
+        font-weight: bold;
       }
+    }
+  }
+  #logo {
+    #left {
+      width: fit-content;
+      margin: 0 auto;
+      float: unset;
+    }
+    #right {
+      display: none;
+    }
+  }
+
+  main {
+    height: 50vh;
+  }
+
+  .img-box p {
+    font-size: 0.75em;
+  }
+
+  #contact {
+    text-align: center;
+    .left,
+    .right {
+      float: unset;
+    }
+    .right {
+      width: 100%;
+      iframe {
+        margin: 0 auto;
+        width: 65%;
+      }
+    }
+    .left {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 2em;
+    }
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  section {
+    padding: 1.5em 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+  nav {
+    ul {
+      li {
+        display: block;
+        border-bottom: 1px solid $color-regular-green;
+      }
+    }
+  }
+
+  .img-box {
+    width: 100%;
+  }
+
+  #logo,
+  main {
+    display: none;
+  }
+
+  #about {
+    text-align: center;
+    p {
+      display: none;
+    }
+    a {
+      float: unset;
+      margin: 0 auto;
+    }
+  }
+
+  #contact {
+    .left,
+    .right {
+      width: 100%;
+    }
+    .right {
+      iframe {
+        width: 100%;
+      }
+    }
   }
 }
