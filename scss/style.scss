@@ -4,7 +4,7 @@
 @include main;
 
 section {
-  padding: 2em 3em;
+  padding: 3em 3em;
 }
 
 h1,
@@ -160,7 +160,7 @@ h2 {
 }
 
 .img-box {
-  width: 33.30%;
+  width: 33.3%;
   float: left;
 
   .img-container {
@@ -184,16 +184,63 @@ h2 {
   }
 }
 
-#about{
-    text-align: justify;
-    @include clearfix;
+#about {
+  text-align: justify;
+  @include clearfix;
 
-    a{
-        padding: 0.5em 1em;
-        float: right;
-        background-color: $color-red;
-        color:$color-green-light;
-        border-radius: 5px;
-        text-decoration: none;
+  a {
+    padding: 0.5em 1em;
+    float: right;
+    background-color: $color-red;
+    color: $color-green-light;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+}
+
+#contact {
+  background-color: $color-dark-green;
+  @include clearfix;
+
+  .left {
+    float: left;
+    width: 49%;
+    background-color: #7f7f7f;
+    padding: 2em;
+    h2 {
+      padding-top: 0.5em;
+      text-align: center;
+      font-size: 1.5em;
     }
+
+    form {
+      text-align: center;
+      input,
+      textarea {
+        padding: 0.5em;
+      }
+      #name,
+      #email {
+        width: 48%;
+      }
+      #subject,
+      textarea {
+        margin-top: 0.5em;
+        width: 97%;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    cursor: pointer;
+  }
+
+  .right{
+      float: right;
+      iframe{
+          height: 360px;
+      }
+  }
 }
